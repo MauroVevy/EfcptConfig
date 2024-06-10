@@ -6,17 +6,25 @@
                 "type": "string"
             },
             "name": {
+                "title": "The name of the folder that will contain the generated configuration files",
                 "type": "string"
             },
             "connectionString": {
+                "title": "Connectionstring to the original database",
                 "type": "string"
             },
             "context": {
+                "title": "Conntext name",
                 "type": "string"
             },
             "models": {
+                "title": "The name of the folder that will contain the generated models",
                 "type": "string"
             },
+            "rootnamespace": {
+                "title": "The root namespace: Usually the project namespace",
+                "type": "string"
+            },            
             "generate": {
                 "type": "string",
                 "default": "all",
@@ -31,20 +39,23 @@
                 ]
             },
             "tables": {
-                "title": "List of tables discovered in the source database",
+                "title": "List of tables to import in the new database",
                 "type": "array",
                 "items": {
                     "type": "object",
                     "properties": {
                         "columns": {
+                            "title": "List of columns to import in the new database",
                             "type": "array",
                             "items": {
                                 "type": "object",
                                 "properties": {
                                     "name": {
+                                        "title": "Original column name",
                                         "type": "string"
                                     },
                                     "newName": {
+                                        "title": "New column name",
                                         "type": "string"
                                     }
                                 },
@@ -55,12 +66,15 @@
                             }
                         },
                         "schema": {
+                            "title": "New schema of table",
                             "type": "string"
                         },
                         "name": {
+                            "title": "Original table name",
                             "type": "string"
                         },
                         "newName": {
+                            "title": "New table name and entity name",
                             "type": "string"
                         }
                     },
