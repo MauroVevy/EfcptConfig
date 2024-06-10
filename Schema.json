@@ -1,0 +1,84 @@
+    {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+            "$schema": {
+                "type": "string"
+            },
+            "name": {
+                "type": "string"
+            },
+            "connectionString": {
+                "type": "string"
+            },
+            "context": {
+                "type": "string"
+            },
+            "models": {
+                "type": "string"
+            },
+            "generate": {
+                "type": "string",
+                "default": "all",
+                "title": "Type of files to generate",
+                "enum": [
+                    "all",
+                    "dbcontext",
+                    "entities"
+                ],
+                "examples": [
+                    "all"
+                ]
+            },
+            "tables": {
+                "title": "List of tables discovered in the source database",
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "columns": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "newName": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "name",
+                                    "newName"
+                                ]
+                            }
+                        },
+                        "schema": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "newName": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "columns",
+                        "schema",
+                        "name",
+                        "newName"
+                    ]
+                }
+            }
+        },
+        "required": [
+            "$schema",
+            "name",
+            "connectionString",
+            "context",
+            "models",
+            "tables"
+        ]
+    }
