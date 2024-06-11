@@ -1,98 +1,104 @@
-    {
-        "$schema": "http://json-schema.org/draft-07/schema#",
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "name": {
+      "title": "The name of the folder that will contain the generated configuration files",
+      "type": "string"
+    },
+    "connectionString": {
+      "title": "Connectionstring to the original database",
+      "type": "string"
+    },
+    "context": {
+      "title": "Conntext name",
+      "type": "string"
+    },
+    "models": {
+      "title": "The name of the folder that will contain the generated models",
+      "type": "string"
+    },
+    "rootnamespace": {
+      "title": "The root namespace: Usually the project namespace",
+      "type": "string"
+    },
+    "generate": {
+      "type": "string",
+      "default": "all",
+      "title": "Type of files to generate",
+      "enum": [
+        "all",
+        "dbcontext",
+        "entities"
+      ],
+      "examples": [
+        "all"
+      ]
+    },
+    "tables": {
+      "title": "List of tables to import in the new database",
+      "type": "array",
+      "items": {
         "type": "object",
         "properties": {
-            "$schema": {
-                "type": "string"
-            },
-            "name": {
-                "title": "The name of the folder that will contain the generated configuration files",
-                "type": "string"
-            },
-            "connectionString": {
-                "title": "Connectionstring to the original database",
-                "type": "string"
-            },
-            "context": {
-                "title": "Conntext name",
-                "type": "string"
-            },
-            "models": {
-                "title": "The name of the folder that will contain the generated models",
-                "type": "string"
-            },
-            "rootnamespace": {
-                "title": "The root namespace: Usually the project namespace",
-                "type": "string"
-            },            
-            "generate": {
-                "type": "string",
-                "default": "all",
-                "title": "Type of files to generate",
-                "enum": [
-                    "all",
-                    "dbcontext",
-                    "entities"
-                ],
-                "examples": [
-                    "all"
-                ]
-            },
-            "tables": {
-                "title": "List of tables to import in the new database",
-                "type": "array",
-                "items": {
-                    "type": "object",
-                    "properties": {
-                        "columns": {
-                            "title": "List of columns to import in the new database",
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "name": {
-                                        "title": "Original column name",
-                                        "type": "string"
-                                    },
-                                    "newName": {
-                                        "title": "New column name",
-                                        "type": "string"
-                                    }
-                                },
-                                "required": [
-                                    "name",
-                                    "newName"
-                                ]
-                            }
-                        },
-                        "schema": {
-                            "title": "Owner schema of table",
-                            "type": "string"
-                        },
-                        "name": {
-                            "title": "Original table name",
-                            "type": "string"
-                        },
-                        "newName": {
-                            "title": "New table name and entity name",
-                            "type": "string"
-                        }
-                    },
-                    "required": [
-                        "columns",
-                        "schema",
-                        "name",
-                        "newName"
-                    ]
+          "columns": {
+            "title": "List of columns to import in the new database",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "title": "Original column name",
+                  "type": "string"
+                },
+                "newName": {
+                  "title": "New column name",
+                  "type": "string"
+                },
+                "disabled": {
+                  "title": "Not considerated from elaboration",
+                  "type": "boolean",
+                  "default": true,
+                  "description": "if disabled will be removed from new model"
                 }
+              },
+              "required": [
+                "name",
+                "newName"
+              ]
             }
+          },
+          "schema": {
+            "title": "Owner schema of table",
+            "type": "string"
+          },
+          "name": {
+            "title": "Original table name",
+            "type": "string"
+          },
+          "newName": {
+            "title": "New table name and entity name",
+            "type": "string"
+          }
         },
         "required": [
-            "$schema",
-            "name",
-            "connectionString",
-            "context",
-            "models",
-            "tables"
+          "columns",
+          "schema",
+          "name",
+          "newName"
         ]
+      }
     }
+  },
+  "required": [
+    "$schema",
+    "name",
+    "connectionString",
+    "context",
+    "models",
+    "tables"
+  ]
+}
