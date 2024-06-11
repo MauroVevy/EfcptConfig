@@ -5,8 +5,9 @@
     "$schema": {
       "type": "string"
     },
-    "name": {
-      "title": "The name of the folder that will contain the generated configuration files",
+    "folder": {
+      "title": "Folder name",
+      "description": "The name of the folder that will contain the generated configuration files",
       "type": "string"
     },
     "connectionString": {
