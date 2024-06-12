@@ -92,6 +92,168 @@
           "newName"
         ]
       }
+    },
+    "functions": {
+      "title": "List of functions to import in the new database",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "columns": {
+            "title": "List of columns to import in the new database",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "title": "Original column name",
+                  "type": "string"
+                },
+                "newName": {
+                  "title": "New column name",
+                  "type": "string"
+                },
+                "disabled": {
+                  "title": "Not considerated from elaboration",
+                  "type": "boolean",
+                  "default": true,
+                  "description": "if disabled will be removed from new model"
+                }
+              },
+              "required": [
+                "name",
+                "newName"
+              ]
+            }
+          },
+          "schema": {
+            "title": "Owner schema of table",
+            "type": "string"
+          },
+          "name": {
+            "title": "Original table name",
+            "type": "string"
+          },
+          "newName": {
+            "title": "New table name and entity name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "columns",
+          "schema",
+          "name",
+          "newName"
+        ]
+      }
+    },
+    "views": {
+      "title": "List of views to import in the new database",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "columns": {
+            "title": "List of columns to import in the new database",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "title": "Original column name",
+                  "type": "string"
+                },
+                "newName": {
+                  "title": "New column name",
+                  "type": "string"
+                },
+                "disabled": {
+                  "title": "Not considerated from elaboration",
+                  "type": "boolean",
+                  "default": true,
+                  "description": "if disabled will be removed from new model"
+                }
+              },
+              "required": [
+                "name",
+                "newName"
+              ]
+            }
+          },
+          "schema": {
+            "title": "Owner schema of table",
+            "type": "string"
+          },
+          "name": {
+            "title": "Original table name",
+            "type": "string"
+          },
+          "newName": {
+            "title": "New table name and entity name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "columns",
+          "schema",
+          "name",
+          "newName"
+        ]
+      }
+    },
+    "StoreProcedures": {
+      "title": "List of Store Procedures to import in the new database",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "columns": {
+            "title": "List of columns to import in the new database",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "title": "Original column name",
+                  "type": "string"
+                },
+                "newName": {
+                  "title": "New column name",
+                  "type": "string"
+                },
+                "disabled": {
+                  "title": "Not considerated from elaboration",
+                  "type": "boolean",
+                  "default": true,
+                  "description": "if disabled will be removed from new model"
+                }
+              },
+              "required": [
+                "name",
+                "newName"
+              ]
+            }
+          },
+          "schema": {
+            "title": "Owner schema of table",
+            "type": "string"
+          },
+          "name": {
+            "title": "Original table name",
+            "type": "string"
+          },
+          "newName": {
+            "title": "New table name and entity name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "columns",
+          "schema",
+          "name",
+          "newName"
+        ]
+      }
     }
   },
   "required": [
