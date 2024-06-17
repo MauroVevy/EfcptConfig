@@ -18,8 +18,14 @@
       "title": "The root namespace: Usually the project namespace",
       "type": "string"
     },
-    "contextName": {
-      "title": "Context name",
+    "sourcecontextName": {
+      "title": "Source Context name",
+      "description": "Usually fluentis",
+      "type": "string"
+    },
+    "targetcontextName": {
+      "title": "Target Context name",
+      "description": "Usually local",
       "type": "string"
     },
     "contextNameSpace": {
