@@ -14,16 +14,28 @@
       "title": "Connectionstring to the original database",
       "type": "string"
     },
-    "context": {
-      "title": "Conntext name",
+    "rootnamespace": {
+      "title": "The root namespace: Usually the project namespace",
       "type": "string"
     },
-    "models": {
+    "contextName": {
+      "title": "Context name",
+      "type": "string"
+    },
+    "contextNameSpace": {
+      "title": "Namespace of Context",
+      "type": "string"
+    },
+    "contextFolder": {
+      "title": "The folder contains the contexts",
+      "type": "string"
+    },
+    "modelFolder": {
       "title": "The name of the folder that will contain the generated models",
       "type": "string"
     },
-    "rootnamespace": {
-      "title": "The root namespace: Usually the project namespace",
+    "modelNamespace": {
+      "title": "Namespece of models",
       "type": "string"
     },
     "generate": {
@@ -57,6 +69,10 @@
                 },
                 "newName": {
                   "title": "New column name",
+                  "type": "string"
+                },
+                "targetName": {
+                  "title": "New column name on database",
                   "type": "string"
                 },
                 "disabled": {
@@ -112,12 +128,6 @@
                 "newName": {
                   "title": "New column name",
                   "type": "string"
-                },
-                "disabled": {
-                  "title": "Not considerated from elaboration",
-                  "type": "boolean",
-                  "default": true,
-                  "description": "if disabled will be removed from new model"
                 }
               },
               "required": [
@@ -165,6 +175,10 @@
                 },
                 "newName": {
                   "title": "New column name",
+                  "type": "string"
+                },
+                "targetName": {
+                  "title": "New column name on database",
                   "type": "string"
                 },
                 "disabled": {
@@ -220,12 +234,6 @@
                 "newName": {
                   "title": "New column name",
                   "type": "string"
-                },
-                "disabled": {
-                  "title": "Not considerated from elaboration",
-                  "type": "boolean",
-                  "default": true,
-                  "description": "if disabled will be removed from new model"
                 }
               },
               "required": [
