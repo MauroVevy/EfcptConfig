@@ -88,6 +88,53 @@
               ]
             }
           },
+          "relationships": {
+            "title": "RelationsShips between two tables",
+            "type": "array",
+            "properties": {
+              "type": {
+                "title": "type of relationships",
+                "description": "Values OneToOne, OneToMany, ManyToMany",
+                "type": "string",
+                "enum": [
+                  "OneToOne",
+                  "OneToMany",
+                  "ManyToMany"
+                ]
+              },
+              "newField": {
+                "title": "New field description",
+                "description": "The new field to add to partial class",
+                "type": "object",
+                "properties": {
+                  "class": {
+                    "title": "class name",
+                    "type": "string"
+                  },
+                  "name": {
+                    "title": "Field name",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "class",
+                  "name"
+                ]
+              },
+              "source": {
+                "title": "Source class",
+                "type": "string"
+              },
+              "key": {
+                "title": "Key field",
+                "type": "string"
+              }
+            },
+            "required": [
+              "title",
+              "key"
+            ]
+          },
           "schema": {
             "title": "Owner schema of table",
             "type": "string"
