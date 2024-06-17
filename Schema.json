@@ -7,7 +7,7 @@
     },
     "folder": {
       "title": "Folder name",
-      "description": "The name of the folder that will contain the generated configuration files",
+      "description": "It is the name of the folder that will contain the new configuration files",
       "type": "string"
     },
     "connectionString": {
@@ -29,7 +29,7 @@
       "type": "string"
     },
     "contextNameSpace": {
-      "title": "Namespace of Context",
+      "title": "The namespace of Context",
       "type": "string"
     },
     "contextFolder": {
@@ -41,7 +41,7 @@
       "type": "string"
     },
     "modelNamespace": {
-      "title": "Namespece of models",
+      "title": "The namespace of modelss",
       "type": "string"
     },
     "generate": {
