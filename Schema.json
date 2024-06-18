@@ -58,6 +58,13 @@
       ],
       "examples": [
         "all"
+      ],
+      "required": [
+        "connectionString",
+        "sourceModelNamespace",
+        "targetModelNamespace",
+        "sourceContextName",
+        "targetContextName"
       ]
     },
     "tables": {
