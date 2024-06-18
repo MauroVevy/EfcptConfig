@@ -32,11 +32,11 @@
       "type": "string"
     },
     "sourceContextName": {
-      "title": "The namespace of source Context",
+      "title": "The name of source Context",
       "type": "string"
     },
     "targetContextName": {
-      "title": "The namespace of target Context",
+      "title": "The name of target Context",
       "type": "string"
     },
     "contextFolder": {
