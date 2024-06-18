@@ -5,11 +5,6 @@
     "$schema": {
       "type": "string"
     },
-    "folder": {
-      "title": "Folder name",
-      "description": "It is the name of the folder that will contain the new configuration files",
-      "type": "string"
-    },
     "connectionString": {
       "title": "Connectionstring to the original database",
       "type": "string"
@@ -18,18 +13,30 @@
       "title": "The root namespace: Usually the project namespace",
       "type": "string"
     },
-    "sourcecontextName": {
+    "sourceModelNamespace": {
+      "title": "The namespace of source models",
+      "type": "string"
+    },
+    "targetModelNamespace": {
+      "title": "The namespace of target models",
+      "type": "string"
+    },
+    "sourcecontextNamespace": {
       "title": "Source Context name",
-      "description": "Usually fluentis",
+      "description": "Usually FluentisContext",
       "type": "string"
     },
-    "targetcontextName": {
+    "targetcontextNamespace": {
       "title": "Target Context name",
-      "description": "Usually local",
+      "description": "Usually LocalContext",
       "type": "string"
     },
-    "contextNameSpace": {
-      "title": "The namespace of Context",
+    "sourceContextName": {
+      "title": "The namespace of source Context",
+      "type": "string"
+    },
+    "targetContextName": {
+      "title": "The namespace of target Context",
       "type": "string"
     },
     "contextFolder": {
@@ -38,10 +45,6 @@
     },
     "modelFolder": {
       "title": "The name of the folder that will contain the generated models",
-      "type": "string"
-    },
-    "modelNamespace": {
-      "title": "The namespace of modelss",
       "type": "string"
     },
     "generate": {
