@@ -5,49 +5,57 @@
     "$schema": {
       "type": "string"
     },
-    "connectionString": {
+    "ConnectionString": {
       "title": "Connectionstring to the original database",
       "type": "string"
     },
-    "rootnamespace": {
+    "Rootnamespace": {
       "title": "The root namespace: Usually the project namespace",
       "type": "string"
     },
-    "sourceModelNamespace": {
+    "SourceModelNamespace": {
       "title": "The namespace of source models",
       "type": "string"
     },
-    "targetModelNamespace": {
+    "TargetModelNamespace": {
       "title": "The namespace of target models",
       "type": "string"
     },
-    "sourcecontextNamespace": {
+    "SourcecontextNamespace": {
       "title": "Source Context name",
       "description": "Usually FluentisContext",
       "type": "string"
     },
-    "targetcontextNamespace": {
+    "TargetcontextNamespace": {
       "title": "Target Context name",
       "description": "Usually LocalContext",
       "type": "string"
     },
-    "sourceContextName": {
+    "SourceContextName": {
       "title": "The name of source Context",
       "type": "string"
     },
-    "targetContextName": {
+    "TargetContextName": {
       "title": "The name of target Context",
       "type": "string"
     },
-    "contextFolder": {
+    "SourceEntityName": {
+      "title": "The name of source entity class",
+      "type": "string"
+    },
+    "TargetEntityName": {
+      "title": "The name of target entity class",
+      "type": "string"
+    },
+    "ContextFolder": {
       "title": "The folder contains the contexts",
       "type": "string"
     },
-    "modelFolder": {
+    "ModelFolder": {
       "title": "The name of the folder that will contain the generated models",
       "type": "string"
     },
-    "generate": {
+    "Generate": {
       "type": "string",
       "default": "all",
       "title": "Type of files to generate",
@@ -60,38 +68,38 @@
         "all"
       ],
       "required": [
-        "connectionString",
-        "sourceModelNamespace",
-        "targetModelNamespace",
-        "sourceContextName",
-        "targetContextName"
+        "ConnectionString",
+        "SourceModelNamespace",
+        "TargetModelNamespace",
+        "SourceContextName",
+        "TargetContextName"
       ]
     },
-    "tables": {
+    "Tables": {
       "title": "List of tables to import in the new database",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "columns": {
+          "Columns": {
             "title": "List of columns to import in the new database",
             "type": "array",
             "items": {
               "type": "object",
               "properties": {
-                "name": {
+                "Name": {
                   "title": "Original column name",
                   "type": "string"
                 },
-                "newName": {
+                "NewName": {
                   "title": "New column name",
                   "type": "string"
                 },
-                "targetName": {
+                "TargetName": {
                   "title": "New column name on database",
                   "type": "string"
                 },
-                "disabled": {
+                "Disabled": {
                   "title": "Not considerated from elaboration",
                   "type": "boolean",
                   "default": true,
@@ -99,16 +107,16 @@
                 }
               },
               "required": [
-                "name",
-                "newName"
+                "Name",
+                "NewName"
               ]
             }
           },
-          "relationships": {
+          "Relationships": {
             "title": "RelationsShips between two tables",
             "type": "array",
             "properties": {
-              "type": {
+              "Type": {
                 "title": "type of relationships",
                 "description": "Values OneToOne, OneToMany, ManyToMany",
                 "type": "string",
@@ -118,133 +126,133 @@
                   "ManyToMany"
                 ]
               },
-              "newField": {
+              "NewField": {
                 "title": "New field description",
                 "description": "The new field to add to partial class",
                 "type": "object",
                 "properties": {
-                  "class": {
+                  "Class": {
                     "title": "class name",
                     "type": "string"
                   },
-                  "name": {
+                  "Name": {
                     "title": "Field name",
                     "type": "string"
                   }
                 },
                 "required": [
-                  "class",
-                  "name"
+                  "Class",
+                  "Name"
                 ]
               },
-              "source": {
+              "Source": {
                 "title": "Source class",
                 "type": "string"
               },
-              "key": {
+              "Key": {
                 "title": "Key field",
                 "type": "string"
               }
             },
             "required": [
-              "title",
-              "key"
+              "Title",
+              "Key"
             ]
           },
-          "schema": {
+          "Schema": {
             "title": "Owner schema of table",
             "type": "string"
           },
-          "name": {
+          "Name": {
             "title": "Original table name",
             "type": "string"
           },
-          "newName": {
+          "NewName": {
             "title": "New table name and entity name",
             "type": "string"
           }
         },
         "required": [
-          "columns",
-          "schema",
-          "name",
-          "newName"
+          "Columns",
+          "Schema",
+          "Name",
+          "NewName"
         ]
       }
     },
-    "functions": {
+    "Functions": {
       "title": "List of functions to import in the new database",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "columns": {
+          "Columns": {
             "title": "List of columns to import in the new database",
             "type": "array",
             "items": {
               "type": "object",
               "properties": {
-                "name": {
+                "Name": {
                   "title": "Original column name",
                   "type": "string"
                 },
-                "newName": {
+                "NewName": {
                   "title": "New column name",
                   "type": "string"
                 }
               },
               "required": [
-                "name",
-                "newName"
+                "Name",
+                "NewName"
               ]
             }
           },
-          "schema": {
+          "Schema": {
             "title": "Owner schema of table",
             "type": "string"
           },
-          "name": {
+          "Name": {
             "title": "Original table name",
             "type": "string"
           },
-          "newName": {
+          "NewName": {
             "title": "New table name and entity name",
             "type": "string"
           }
         },
         "required": [
-          "columns",
-          "schema",
-          "name",
-          "newName"
+          "Columns",
+          "Schema",
+          "Name",
+          "NewName"
         ]
       }
     },
-    "views": {
+    "Views": {
       "title": "List of views to import in the new database",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "columns": {
+          "Columns": {
             "title": "List of columns to import in the new database",
             "type": "array",
             "items": {
               "type": "object",
               "properties": {
-                "name": {
+                "Name": {
                   "title": "Original column name",
                   "type": "string"
                 },
-                "newName": {
+                "NewName": {
                   "title": "New column name",
                   "type": "string"
                 },
-                "targetName": {
+                "TargetName": {
                   "title": "New column name on database",
                   "type": "string"
                 },
-                "disabled": {
+                "Disabled": {
                   "title": "Not considerated from elaboration",
                   "type": "boolean",
                   "default": true,
@@ -252,29 +260,29 @@
                 }
               },
               "required": [
-                "name",
-                "newName"
+                "Name",
+                "NewName"
               ]
             }
           },
-          "schema": {
+          "Schema": {
             "title": "Owner schema of table",
             "type": "string"
           },
-          "name": {
+          "Name": {
             "title": "Original table name",
             "type": "string"
           },
-          "newName": {
+          "NewName": {
             "title": "New table name and entity name",
             "type": "string"
           }
         },
         "required": [
-          "columns",
-          "schema",
-          "name",
-          "newName"
+          "Columns",
+          "Schema",
+          "Name",
+          "NewName"
         ]
       }
     },
@@ -284,45 +292,45 @@
       "items": {
         "type": "object",
         "properties": {
-          "columns": {
+          "Columns": {
             "title": "List of columns to import in the new database",
             "type": "array",
             "items": {
               "type": "object",
               "properties": {
-                "name": {
+                "Name": {
                   "title": "Original column name",
                   "type": "string"
                 },
-                "newName": {
+                "NewName": {
                   "title": "New column name",
                   "type": "string"
                 }
               },
               "required": [
-                "name",
-                "newName"
+                "Name",
+                "NewName"
               ]
             }
           },
-          "schema": {
+          "Schema": {
             "title": "Owner schema of table",
             "type": "string"
           },
-          "name": {
+          "Name": {
             "title": "Original table name",
             "type": "string"
           },
-          "newName": {
+          "NewName": {
             "title": "New table name and entity name",
             "type": "string"
           }
         },
         "required": [
-          "columns",
-          "schema",
-          "name",
-          "newName"
+          "Columns",
+          "Schema",
+          "Name",
+          "NewName"
         ]
       }
     }
