@@ -107,49 +107,53 @@
           "Relationships": {
             "title": "RelationsShips between two tables",
             "type": "array",
-            "properties": {
-              "Type": {
-                "title": "type of relationships",
-                "description": "Values OneToOne, OneToMany, ManyToMany",
-                "type": "string",
-                "enum": [
-                  "OneToOne",
-                  "OneToMany",
-                  "ManyToMany"
-                ]
-              },
-              "NewField": {
-                "title": "New field description",
-                "description": "The new field to add to partial class",
-                "type": "object",
-                "properties": {
-                  "Class": {
-                    "title": "class name",
-                    "type": "string"
-                  },
-                  "Name": {
-                    "title": "Field name",
-                    "type": "string"
-                  }
+            "items": {
+              "type": "object",
+              "properties": {
+                "Type": {
+                  "title": "type of relationships",
+                  "description": "Values OneToOne, OneToMany, ManyToMany",
+                  "type": "string",
+                  "enum": [
+                    "OneToOne",
+                    "OneToMany",
+                    "ManyToMany",
+                    "None"
+                  ]
                 },
-                "required": [
-                  "Class",
-                  "Name"
-                ]
+                "NewField": {
+                  "title": "New field description",
+                  "description": "The new field to add to partial class",
+                  "type": "object",
+                  "properties": {
+                    "Class": {
+                      "title": "class name",
+                      "type": "string"
+                    },
+                    "Name": {
+                      "title": "Field name",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "Class",
+                    "Name"
+                  ]
+                },
+                "Source": {
+                  "title": "Source class",
+                  "type": "string"
+                },
+                "Key": {
+                  "title": "Key field",
+                  "type": "string"
+                }
               },
-              "Source": {
-                "title": "Source class",
-                "type": "string"
-              },
-              "Key": {
-                "title": "Key field",
-                "type": "string"
-              }
-            },
-            "required": [
-              "Title",
-              "Key"
-            ]
+              "required": [
+                "Title",
+                "Key"
+              ]
+            }
           },
           "Schema": {
             "title": "Owner schema of table",
