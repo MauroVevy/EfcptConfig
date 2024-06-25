@@ -110,19 +110,8 @@
             "items": {
               "type": "object",
               "properties": {
-                "Type": {
-                  "title": "type of relationships",
-                  "description": "Values OneToOne, OneToMany, ManyToMany",
-                  "type": "string",
-                  "enum": [
-                    "OneToOne",
-                    "OneToMany",
-                    "ManyToMany",
-                    "None"
-                  ]
-                },
-                "NewField": {
-                  "title": "New field description",
+                "Navigation": {
+                  "title": "New navigation field description",
                   "description": "The new field to add to partial class",
                   "type": "object",
                   "properties": {
@@ -140,22 +129,50 @@
                     "Name"
                   ]
                 },
-                "Source": {
-                  "title": "Source class",
+                "HasOne": {
+                  "title": "Has one slave relationship",
                   "type": "string"
                 },
-                "Key": {
-                  "title": "Key field",
+                "HasMany": {
+                  "title": "Has many slave relationship",
                   "type": "string"
+                },
+                "WithOne": {
+                  "title": "Has one main relationship",
+                  "type": "string"
+                },
+                "HasForeignKey": {
+                  "title": "Column of foreign key",
+                  "type": "string"
+                },
+                "HasPrincipalKey": {
+                  "title": "Column of main key",
+                  "type": "string"
+                },
+                "IsRequired": {
+                  "title": "The record must be required",
+                  "type": "boolean"
+                },
+                "OnDelete": {
+                  "title": "The record must be required",
+                  "type": "string",
+                  "enum": [
+                    "NoAction",
+                    "Cascade",
+                    "SetNull",
+                    "SetDefault"
+                  ]
                 }
               },
-              "required": [
-                "NewField"
-              ]
+              "required": []
             }
           },
           "Schema": {
             "title": "Owner schema of table",
+            "type": "string"
+          },
+          "TargetSchema": {
+            "title": "Target Owner schema of table",
             "type": "string"
           },
           "Name": {
@@ -204,6 +221,11 @@
           },
           "Schema": {
             "title": "Owner schema of table",
+            "type": "string"
+          },
+
+          "TargetSchema": {
+            "title": "Target Owner schema of table",
             "type": "string"
           },
           "Name": {
@@ -264,6 +286,11 @@
             "title": "Owner schema of table",
             "type": "string"
           },
+
+          "TargetSchema": {
+            "title": "Target Owner schema of table",
+            "type": "string"
+          },
           "Name": {
             "title": "Original table name",
             "type": "string"
@@ -310,6 +337,11 @@
           },
           "Schema": {
             "title": "Owner schema of table",
+            "type": "string"
+          },
+
+          "TargetSchema": {
+            "title": "Target Owner schema of table",
             "type": "string"
           },
           "Name": {
