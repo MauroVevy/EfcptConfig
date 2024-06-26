@@ -115,6 +115,10 @@
                   "description": "The new field to add to partial class",
                   "type": "object",
                   "properties": {
+                    "IsCollection": {
+                      "title": "If collection create an ICollection entity",
+                      "type": "boolean"
+                    },
                     "Class": {
                       "title": "class name",
                       "type": "string"
