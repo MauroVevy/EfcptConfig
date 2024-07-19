@@ -79,16 +79,20 @@
             "items": {
               "type": "object",
               "properties": {
-                "Name": {
-                  "title": "Original column name",
+                "SourceColumnName": {
+                  "title": "Column name on source Database",
                   "type": "string"
                 },
-                "NewName": {
-                  "title": "New column name",
+                "TargetColumnName": {
+                  "title": "Column name on target Database",
                   "type": "string"
                 },
-                "TargetName": {
-                  "title": "New column name on database",
+                "SourcePropertyName": {
+                  "title": "Propertyname on model of source Database",
+                  "type": "string"
+                },
+                "TargetPropertyName": {
+                  "title": "Propertyname on model of target Database",
                   "type": "string"
                 },
                 "Disabled": {
@@ -208,12 +212,20 @@
             "items": {
               "type": "object",
               "properties": {
-                "Name": {
-                  "title": "Original column name",
+                "SourceColumnName": {
+                  "title": "Column name on source Database",
                   "type": "string"
                 },
-                "NewName": {
-                  "title": "New column name",
+                "TargetColumnName": {
+                  "title": "Column name on target Database",
+                  "type": "string"
+                },
+                "SourcePropertyName": {
+                  "title": "Propertyname on model of source Database",
+                  "type": "string"
+                },
+                "TargetPropertyName": {
+                  "title": "Propertyname on model of target Database",
                   "type": "string"
                 }
               },
@@ -261,12 +273,20 @@
             "items": {
               "type": "object",
               "properties": {
-                "Name": {
-                  "title": "Original column name",
+                "SourceColumnName": {
+                  "title": "Column name on source Database",
                   "type": "string"
                 },
-                "NewName": {
-                  "title": "New column name",
+                "TargetColumnName": {
+                  "title": "Column name on target Database",
+                  "type": "string"
+                },
+                "SourcePropertyName": {
+                  "title": "Propertyname on model of source Database",
+                  "type": "string"
+                },
+                "TargetPropertyName": {
+                  "title": "Propertyname on model of target Database",
                   "type": "string"
                 },
                 "Disabled": {
@@ -320,12 +340,20 @@
             "items": {
               "type": "object",
               "properties": {
-                "Name": {
-                  "title": "Original column name",
+                "SourceColumnName": {
+                  "title": "Column name on source Database",
                   "type": "string"
                 },
-                "NewName": {
-                  "title": "New column name",
+                "TargetColumnName": {
+                  "title": "Column name on target Database",
+                  "type": "string"
+                },
+                "SourcePropertyName": {
+                  "title": "Propertyname on model of source Database",
+                  "type": "string"
+                },
+                "TargetPropertyName": {
+                  "title": "Propertyname on model of target Database",
                   "type": "string"
                 }
               },
