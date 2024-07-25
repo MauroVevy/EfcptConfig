@@ -138,8 +138,12 @@
                 }
               },
               "required": [
-                "Name",
-                "NewName"
+                "SourceColumnName",
+                "TargetColumnName",
+                "SourcePropertyName",
+                "TargetPropertyName",
+                "ClrType",
+                "ColumnType"
               ]
             }
           },
@@ -300,8 +304,12 @@
                 }
               },
               "required": [
-                "Name",
-                "NewName"
+                "SourceColumnName",
+                "TargetColumnName",
+                "SourcePropertyName",
+                "TargetPropertyName",
+                "ClrType",
+                "ColumnType"
               ]
             }
           },
@@ -402,8 +410,12 @@
                 }
               },
               "required": [
-                "Name",
-                "NewName"
+                "SourceColumnName",
+                "TargetColumnName",
+                "SourcePropertyName",
+                "TargetPropertyName",
+                "ClrType",
+                "ColumnType"
               ]
             }
           },
@@ -463,8 +475,10 @@
                 }
               },
               "required": [
-                "Name",
-                "NewName"
+                "SourceColumnName",
+                "TargetColumnName",
+                "SourcePropertyName",
+                "TargetPropertyName"
               ]
             }
           },
