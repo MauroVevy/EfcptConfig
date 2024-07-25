@@ -95,6 +95,41 @@
                   "title": "Propertyname on model of target Database",
                   "type": "string"
                 },
+                "ClrType": {
+                  "title": "Clr Type of entity",
+                  "type": "string"
+                },
+                "ColumnType": {
+                  "title": "Sql Column Type",
+                  "description": "example decimal(28,15)",
+                  "type": "string"
+                },
+                "HasMaxLength": {
+                  "title": "String or char Sql column length",
+                  "type": "number"
+                },
+                "IsFixedLength": {
+                  "title": "FixedLength of string or char column",
+                  "type": "boolean",
+                  "default": false
+                },
+                "IsNullable": {
+                  "title": "Column is nullable",
+                  "type": "boolean",
+                  "default": false
+                },
+                "HasValueGeneratedNever": {
+                  "title": "Column is not an identity",
+                  "type": "boolean",
+                  "default": false,
+                  "description": "To avoid that EFCore add identity by default to field called id"
+                },
+                "IsPrimaryKey": {
+                  "title": "Column is Primary Key",
+                  "type": "boolean",
+                  "default": false,
+                  "description": "The column is a primary key"
+                },
                 "Disabled": {
                   "title": "Not considerated from elaboration",
                   "type": "boolean",
@@ -227,6 +262,41 @@
                 "TargetPropertyName": {
                   "title": "Propertyname on model of target Database",
                   "type": "string"
+                },
+                "ClrType": {
+                  "title": "Clr Type of entity",
+                  "type": "string"
+                },
+                "ColumnType": {
+                  "title": "Sql Column Type",
+                  "description": "example decimal(28,15)",
+                  "type": "string"
+                },
+                "HasMaxLength": {
+                  "title": "String or char Sql column length",
+                  "type": "number"
+                },
+                "IsFixedLength": {
+                  "title": "FixedLength of string or char column",
+                  "type": "boolean",
+                  "default": false
+                },
+                "IsNullable": {
+                  "title": "Column is nullable",
+                  "type": "boolean",
+                  "default": false
+                },
+                "HasValueGeneratedNever": {
+                  "title": "Column is not an identity",
+                  "type": "boolean",
+                  "default": false,
+                  "description": "To avoid that EFCore add identity by default to field called id"
+                },
+                "IsPrimaryKey": {
+                  "title": "Column is Primary Key",
+                  "type": "boolean",
+                  "default": false,
+                  "description": "The column is a primary key"
                 }
               },
               "required": [
@@ -288,6 +358,41 @@
                 "TargetPropertyName": {
                   "title": "Propertyname on model of target Database",
                   "type": "string"
+                },
+                "ClrType": {
+                  "title": "Clr Type of entity",
+                  "type": "string"
+                },
+                "ColumnType": {
+                  "title": "Sql Column Type",
+                  "description": "example decimal(28,15)",
+                  "type": "string"
+                },
+                "HasMaxLength": {
+                  "title": "String or char Sql column length",
+                  "type": "number"
+                },
+                "IsFixedLength": {
+                  "title": "FixedLength of string or char column",
+                  "type": "boolean",
+                  "default": false
+                },
+                "IsNullable": {
+                  "title": "Column is nullable",
+                  "type": "boolean",
+                  "default": false
+                },
+                "HasValueGeneratedNever": {
+                  "title": "Column is not an identity",
+                  "type": "boolean",
+                  "default": false,
+                  "description": "To avoid that EFCore add identity by default to field called id"
+                },
+                "IsPrimaryKey": {
+                  "title": "Column is Primary Key",
+                  "type": "boolean",
+                  "default": false,
+                  "description": "The column is a primary key"
                 },
                 "Disabled": {
                   "title": "Not considerated from elaboration",
