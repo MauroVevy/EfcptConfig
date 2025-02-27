@@ -445,8 +445,8 @@
         ]
       }
     },
-    "StoreProcedures": {
-      "title": "List of Store Procedures to import in the new database",
+    "StoredProcedures": {
+      "title": "List of Stored Procedures to import in the new database",
       "type": "array",
       "items": {
         "type": "object",
